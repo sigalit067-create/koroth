@@ -1,96 +1,254 @@
-\documentclass[11pt, a4paper]{article}
-\usepackage[a4paper, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
-\usepackage{fontspec}
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סיגלית הרוש - קורות חיים</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* כחול כהה אלגנטי */
+            --secondary-color: #34495e;
+            --text-color: #333;
+            --light-gray: #f9f9f9;
+            --border-color: #e0e0e0;
+        }
 
-\usepackage[hebrew, bidi=basic, provide=*]{babel}
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f0f2f5;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
 
-\babelprovide[import, onchar=ids fonts]{hebrew}
-\babelprovide[import, onchar=ids fonts]{english}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-% Set default/Latin font to Sans Serif in the main (rm) slot
-\babelfont{rm}{Noto Sans}
-% Assign a specific font for Hebrew text
-\babelfont[hebrew]{rm}{Noto Sans Hebrew}
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
 
-\usepackage{enumitem}
-\setlist[itemize]{label=-, itemsep=0pt, parsep=0pt, topsep=2pt, partopsep=0pt, leftmargin=*}
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+        }
 
-\usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{hyperref}
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
 
-% Define a professional dark blue color
-\definecolor{primary}{RGB}{44, 62, 80}
+        .contact-info {
+            font-size: 1rem;
+            color: #666;
+        }
 
-% Format section titles for compact spacing
-\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1.5ex}{0.8ex}
+        .contact-info span {
+            margin: 0 10px;
+        }
 
-\begin{document}
-\pagestyle{empty} % Remove page numbers
+        section {
+            margin-bottom: 30px;
+        }
 
-\begin{center}
-    {\Huge \bfseries סיגלית הרוש} \\ \vspace{0.8ex} 
-    \textbf{אחות מרכזת פיתוח מקצועי | מנהלת סיעוד מנוסה} \\ \vspace{0.5ex}
-    052-4789626 \quad | \quad בני עיש
-\end{center}
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
 
-\vspace{0.5ex}
+        .item {
+            margin-bottom: 20px;
+        }
 
-\section*{ניסיון ניהולי וקליני}
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
 
-\noindent \textbf{אחות מרכזת תחום פיתוח מקצועי, הנהלת הסיעוד} \hfill \textbf{2023 עד כיום} \\
-\begin{itemize}
-    \item תכנון והפעלת פרויקטים להעשרה וקידום מקצועי, ואיתור צרכים להכנת תוכניות התערבות בבית החולים.
-    \item ניהול תהליכי קליטת אחיות חדשות, והובלת קבוצת המדריכים הקליניים במוסד.
-    \item בקרה על יישום נהלי פיתוח מקצועי וקיום קשר שוטף עם מוסדות אקדמיים לתיאום הדרכת סטודנטים.
-\end{itemize}
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+            }
+        }
 
-\vspace{0.8ex}
-\noindent \textbf{מנהלת סיעוד מחלקתית - טיפול נמרץ לב} \hfill \textbf{2015 עד 2023} \\
-\begin{itemize}
-    \item ניהול מלא של המחלקה: תכנון כוח אדם, בניית תוכניות עבודה, וקליטה והכשרת צוות סיעודי חדש.
-    \item אחריות על איכות הטיפול הקליני, הובלת הצוות לעמידה ביעדי מדדי איכות ומבדקים פנימיים וחיצוניים.
-    \item הובלת פרויקטים, קידום עשייה אקדמית (שותפות בוועדת מחקר בסיעוד) ופיתוח מקצועי של הצוות ביחידה.
-    \item הטמעת חזון של שירות מכבד למטופלים וליווי אישי ומקצועי של סגל הניהול הזוטר במחלקה.
-\end{itemize}
+        .item-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
 
-\vspace{0.8ex}
-\noindent \textbf{מנהלת תורנית בבית החולים (משמרות מערך)} \hfill \textbf{2011 עד 2015} \\
-\begin{itemize}
-    \item ניהול כולל של מערך האשפוז בשעות תורנות: וויסות וניוד מטופלים, ותכנון ותפעול כוח אדם נדרש.
-    \item פיקוח על מצבי חירום, דיווח אירועים חריגים, ומתן תמיכה קלינית וניהולית לכלל צוותי בית החולים.
-\end{itemize}
+        .item-date {
+            font-weight: 500;
+            color: #555;
+            background: var(--light-gray);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
 
-\vspace{0.8ex}
-\noindent \textbf{סגנית אחות אחראית ביחידה לטיפול נמרץ לב} \hfill \textbf{2002 עד 2011} \\
-\begin{itemize}
-    \item מילוי מקום האחות האחראית על כלל תחומי הניהול, קביעת סטנדרטים קליניים ופיתוח הדרכות לחולי לב.
-\end{itemize}
+        ul {
+            margin-top: 5px;
+            padding-right: 20px;
+        }
 
-\vspace{0.8ex}
-\noindent \textbf{אחות טיפול נמרץ נשימתי ומדריכה קלינית} \hfill \textbf{1991 עד 2002} \\
-\begin{itemize}
-    \item אחריות על קליטת צוות, הדרכת סטודנטים והקניית מיומנויות קליניות מתקדמות בשדה הטיפול הנמרץ.
-\end{itemize}
+        li {
+            margin-bottom: 6px;
+        }
 
-\section*{השכלה אקדמית}
-\noindent \textbf{תואר שני (M.A) בסיעוד} (מסלול כתיבת עבודת גמר) $\cdot$ \textit{אוניברסיטת תל אביב} \hfill \textbf{2002 עד 2007} \\
-\textbf{תואר ראשון (B.A) במדעי החברה}, בהצטיינות $\cdot$ \textit{אוניברסיטת בר אילן} \hfill \textbf{1996 עד 2000}
+        .compact-list {
+            line-height: 1.8;
+        }
+        
+        strong {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
 
-\section*{קורסים, תעודות והוראה אקדמית}
-\noindent \textbf{הכשרות מקצועיות וניהוליות:} קורס הנחיית קבוצות (2024), הכשרה ניהולית למנהלות סיעוד מחלקתיות (2016), הכשרה ניהולית לדרג ביניים (2012), קורס הדרכה קלינית (2010), מחקר בסיעוד (2008), עתודה ניהולית (2002), וקורס על-בסיסי בטיפול נמרץ משולב (1994-1995). \\
-\textbf{הדרכה אקדמית (2016-כיום):} מרכזת קורס "מצבים דחופים" לשנה ד' (בי"ס אקדמי קפלן) ומרצת חוץ בתחום הקרדיולוגיה לסטודנטים ולקורסים על-בסיסיים בטיפול נמרץ.
+<div class="container">
+    <header>
+        <h1>סיגלית הרוש</h1>
+        <div class="subtitle">אחות מרכזת פיתוח מקצועי | מנהלת סיעוד מנוסה</div>
+        <div class="contact-info">
+            <span>052-4789626</span> | <span>בני עיש</span>
+        </div>
+    </header>
 
-\section*{מחקר, פרויקטים וכנסים נבחרים}
-\begin{itemize}
-    \item \textbf{כנסים מוסדיים ולאומיים (2021-2023):} הצגת פוסטר בכנס מדיניות בריאות; מחקר "תשישות וסיפוק חמלה בקורונה ובשגרה" (יום מחקר); הצגת הנושא TAVI בגיל המבוגר.
-    \item \textbf{איכות ושירות (2014-2018):} הצגת פרויקטים ופוסטרים בנושאי שינוי סדר יום למטופל בטיפול נמרץ לב, הדרכה לקראת שחרור לאחר אוטם, והעברת מידע למחלקות צנתור (כנס איכות ברפואה).
-    \item \textbf{עבודה מצטיינת בסיעוד (2010):} הצגת מחקר "השפעת הלחץ על הזיכרון כהיענות לטיפול באוטם שריר הלב" בכנס מחקר קפלן ובכנס טיפול נמרץ קרדיאלי (זוכת פרס עבודה מצטיינת).
-\end{itemize}
+    <section>
+        <h2>ניסיון ניהולי וקליני</h2>
 
-\section*{כישורים ושפות}
-\noindent \textbf{מיומנויות ניהול:} עבודה והובלה במצבי לחץ, קבלת החלטות מהירה ותעדוף משימות, ראייה מערכתית אסטרטגית, מתן מענה גמיש לצרכי הארגון ויחסי אנוש מעולים. \\
-\textbf{שפות:} עברית (שפת אם), אנגלית (קריאה, כתיבה ודיבור ברמה טובה).
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">אחות מרכזת תחום פיתוח מקצועי, הנהלת הסיעוד</div>
+                <div class="item-date">2023 עד היום</div>
+            </div>
+            <ul>
+                <li>תכנון והפעלת פרויקטים להעשרה וקידום מקצועי בסיעוד.</li>
+                <li>ניהול תהליך קליטת אחיות ואיתור צרכים להכנת תוכניות התערבות והכשרה.</li>
+                <li>ניהול והובלת קבוצת המדריכים הקליניים בבית החולים.</li>
+                <li>בקרה על נהלים וקיום קשר שוטף עם מוסדות אקדמיים לתיאום הדרכת סטודנטים.</li>
+            </ul>
+        </div>
 
-\end{document}
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">מנהלת סיעוד מחלקתית - טיפול נמרץ לב</div>
+                <div class="item-date">2015 עד 2023</div>
+            </div>
+            <ul>
+                <li>ניהול מלא של המחלקה: תכנון כוח אדם, קליטה והכשרת צוות סיעודי חדש.</li>
+                <li>אחריות על איכות הטיפול, ועמידה ביעדי מדדי איכות ומבדקים פנימיים וחיצוניים.</li>
+                <li>הובלת פרויקטים, פיתוח מקצועי (קורסים ולימודים), ושותפות בוועדת מחקר בסיעוד.</li>
+                <li>הטמעת חזון של שירות מכבד ומקצועי למטופלים ובני משפחתם.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">מנהלת תורנית בבית החולים (משמרות ערב, לילה, שבתות וחגים)</div>
+                <div class="item-date">2011 עד 2015</div>
+            </div>
+            <ul>
+                <li>ניהול מערך האשפוז, וויסות וניוד מטופלים, ותכנון כוח אדם נדרש.</li>
+                <li>פיקוח על מצבי חירום, דיווח אירועים חריגים, ומתן תמיכה קלינית וניהולית לכלל הצוותים.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">סגנית אחות אחראית, יחידה לטיפול נמרץ לב</div>
+                <div class="item-date">2002 עד 2011</div>
+            </div>
+            <ul>
+                <li>מילוי מקום האחות האחראית, קביעת סטנדרטים קליניים והובלת הדרכות לחולי לב.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">אחות טיפול נמרץ נשימתי ומדריכה קלינית</div>
+                <div class="item-date">1991 עד 2002</div>
+            </div>
+            <ul>
+                <li>הדרכת סטודנטים והקניית מיומנויות קליניות מתקדמות בטיפול נמרץ, וקליטת צוות חדש.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>השכלה אקדמית</h2>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">תואר שני (M.A) בסיעוד במסלול עבודת גמר</div>
+                <div class="item-date">2002 עד 2007</div>
+            </div>
+            <div><em>אוניברסיטת תל אביב</em></div>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">תואר ראשון (B.A) במדעי החברה, בהצטיינות</div>
+                <div class="item-date">1996 עד 2000</div>
+            </div>
+            <div><em>אוניברסיטת בר אילן</em></div>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">אחות מוסמכת (מסלול הסבה)</div>
+                <div class="item-date">1989 עד 1991</div>
+            </div>
+            <div><em>בית ספר לסיעוד אסף הרופא</em></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>קורסים, תעודות והוראה אקדמית</h2>
+        <div class="compact-list">
+            <strong>הכשרות מקצועיות וניהוליות:</strong> קורס הנחיית קבוצות (2024), הכשרה ניהולית למנהלות סיעוד מחלקתיות (2016), הכשרה ניהולית לדרג ביניים (2012), הדרכה קלינית (2010), מחקר בסיעוד (2008), עתודה ניהולית (2002), קורס על-בסיסי בטיפול נמרץ משולב (1994-1995).<br>
+            <strong>הוראה אקדמית (2016-כיום):</strong> מרכזת קורס "מצבים דחופים" לשנה ד' (בי"ס אקדמי קפלן) ומרצת חוץ בתחום הקרדיולוגיה לסטודנטים ולקורסים על-בסיסיים בטיפול נמרץ.
+        </div>
+    </section>
+
+    <section>
+        <h2>מחקר והצגת עבודות</h2>
+        <ul>
+            <li><strong>כנסים מוסדיים (2021-2023):</strong> הצגת פוסטר בכנס מדיניות בריאות; מחקר "תשישות וסיפוק חמלה בקורונה ובשגרה"; הצגת נושא TAVI בגיל המבוגר.</li>
+            <li><strong>כנס איכות ברפואה וכנסי שירות (2014-2018):</strong> הצגת פרויקטים בנושאי הדרכה לקראת שחרור לאחר אוטם, שינוי סדר יום למטופל בט"נ לב, והעברת מידע למחלקות צנתור.</li>
+            <li><strong>עבודה מצטיינת בסיעוד (2010):</strong> הצגת מחקר "השפעת לחץ על זיכרון והיענות לטיפול באוטם שריר הלב" (זוכת פרס עבודה מצטיינת).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>כישורים ושפות</h2>
+        <div class="compact-list">
+            <strong>מיומנויות ניהול:</strong> עמידה ועבודה במצבי לחץ, קבלת החלטות מהירה ותעדוף משימות, ראייה מערכתית רחבה, מתן מענה גמיש לצרכי הארגון ויחסי אנוש מצוינים.<br>
+            <strong>שפות:</strong> עברית (שפת אם), אנגלית (קריאה, כתיבה ודיבור ברמה טובה).
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
